@@ -34,9 +34,9 @@ Now, start containers with :
 
 ```bash
 # Start Traefik
-docker-compose -f docker-compose.yml up -d
+docker compose -f docker-compose.yml up -d
 # Start "whoami" example
-docker-compose -f whoami.yml up
+docker compose -f whoami.yml up
 ```
 
 
