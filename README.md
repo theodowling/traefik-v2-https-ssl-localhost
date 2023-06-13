@@ -1,13 +1,13 @@
 # Traefik v2 HTTPS (SSL) on localhost
 
-This repo is a minimal template to use Traefik v2 on localhost with HTTPS support.
+This repo is a fork from the original by Heziode. It is a minimal template to use Traefik v2 on localhost with HTTPS support.
 
-
+I've just updated it for my needs. Basically having a different domain.
 
 To get started, just clone this repo:
 
 ```
-git clone https://github.com/Heziode/traefik-v2-https-ssl-localhost.git
+git clone https://github.com/theodowling/traefik-v2-https-ssl-localhost.git
 ```
 
 
@@ -19,7 +19,7 @@ Next, go to the root of the repo (`cd traefik-v2-https-ssl-localhost`) and gener
 mkcert -install
 
 # Generate certificate for domain "docker.localhost", "domain.local" and their sub-domains
-mkcert -cert-file certs/local-cert.pem -key-file certs/local-key.pem "docker.localhost" "*.docker.localhost" "domain.local" "*.domain.local"
+mkcert -cert-file certs/local-cert.pem -key-file certs/local-key.pem "docker.local" "*.docker.local" "home.local" "*.home.local"
 ```
 
 
@@ -41,9 +41,9 @@ docker-compose -f whoami.yml up
 
 
 
-You can now go to your browser at [whoami.docker.localhost](https://whoami.docker.localhost), enjoy :rocket: !
+You can now go to your browser at [whoami.docker.local](https://whoami.docker.local), enjoy :rocket: !
 
-*Note: you can access to Træfik dashboard at: [traefik.docker.localhost](https://traefik.docker.localhost)*
+*Note: you can access to Træfik dashboard at: [traefik.docker.local](https://traefik.docker.local)*
 
 Don't forget that you can also map TCP and UDP through Træfik.
 
